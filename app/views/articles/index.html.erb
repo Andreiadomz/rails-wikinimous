@@ -1,0 +1,13 @@
+<div class= "container">
+    <% @articles.each do |article| %>
+
+    <h1><%= link_to article.title, article_path(article) %></h1>
+
+    <p><%= article.content %></p>
+
+    <% end %>
+
+  <hr />
+
+<p class="link-margin"><i class="fas fa-plus"></i><%= link_to " Add a new article", new_article_path %></p>
+</div>
